@@ -6,7 +6,7 @@ header {
 }
 
 .border{
-    background-image: url("/panda-icon-75289.png");
+    background-image: url("./panda-icon-75289.png");
     width: 100%;
     height: 35px;
 }

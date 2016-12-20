@@ -15,7 +15,7 @@ def home_list(request):
 
 def detail(request):
     """View for the detail page."""
-    imported_text = open(os.path.join(HERE, 'templates/post_details.html')).read()
+    imported_text = open(os.path.join(HERE, 'data/day11.html')).read()
     return Response(imported_text)
 
 

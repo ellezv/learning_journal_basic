@@ -18,6 +18,7 @@ You can find this learning journal deployed on Heroku [here](http://maelle-learn
 
 #Routes
 So far we have very basic routing:
+
     - home: `/` will take you to the home page, a listing of journal entries
     - list: `/journal/today` is my journal entry for today 12/19/16
     - create: `/journal/create-entry` will take you to a (non-functional) form to create an entry

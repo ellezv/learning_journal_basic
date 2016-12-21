@@ -17,9 +17,11 @@ def test_home_page_has_right_dict(req):
 
 
 def test_home_page_has_iter(req):
+    """Test that homepage has itter."""
     from .views import home_list
     response = home_list(req)
-    assert hasattr(response["bag_list"], "__iter__")
+    assert hasattr(response["posts"], "__iter__")
+
 
 @pytest.fixture
 def testapp():

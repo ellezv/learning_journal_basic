@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Playfair+Display" rel="stylesheet">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Learning Journal</title>
+  </head>
+  <body>
+    <header>
+      <a href="{{ request.route_url('home') }}"><h1>Learning Journal</h1></a>
+      <section class="border"></section>
+    </header>
+      {% block main %}{% endblock %}
+    <footer>
+      <p>There should probably be an inspirational quote here. Consider yourself inspired.</p>
+    </footer>
+  </body>
+</html>

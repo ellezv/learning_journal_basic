@@ -46,7 +46,7 @@ def create(request):
     return {"post": ENTRIES}
 
 
-@view_config(route_name="update", renderer="template")
+@view_config(route_name="update", renderer="templates/edit_post_form.jinja2")
 def update(request):
     """View for update page."""
     return {"post": ENTRIES[int(request.matchdict['id']) - 1]}

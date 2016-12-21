@@ -46,7 +46,7 @@ def detail(request):
 @view_config(route_name="create", renderer="templates/new_post_form.jinja2")
 def create(request):
     """View for create page."""
-    return 'request'
+    return {"post": ENTRIES}
 
 
 @view_config(route_name="update", renderer="template")
@@ -54,7 +54,7 @@ def update(request):
     """View for update page."""
     imported_text = open(os.path.join(HERE, 'templates/edit_post_form.html')).read()
     # return Response(imported_text)
-    return imported_text
+    return {"post": ENTRIES}
 
 
 # def includeme(config):

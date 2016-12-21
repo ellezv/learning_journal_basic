@@ -1,10 +1,6 @@
 """Views for pyramid."""
 
 from pyramid.view import view_config
-import os
-
-
-HERE = os.path.dirname(__file__)
 
 ENTRIES = [
     {
@@ -20,9 +16,9 @@ ENTRIES = [
           """
     },
     {
-        "title": "Entry 2",
+        "title": "Tuesday 12/20: Day 13",
         "id": 2,
-        "creation_date": "Dec 21, 2016",
+        "published_on": "Dec 21, 2016",
         "body": """Today I learned that I don't know how to implement a Deque.
           So there's that.
           Jinja2 templating is really similar to Django templates which have a (very minimal) experience with so it wasn't too overwhelming.
@@ -35,15 +31,12 @@ ENTRIES = [
 @view_config(route_name="home", renderer="templates/index.jinja2")
 def home_list(request):
     """View for the home page."""
-    # imported_text = open(os.path.join(HERE, 'templates/index.html')).read()
-    # # return Response(imported_text)
     return {"posts": ENTRIES}
 
 
 @view_config(route_name="detail", renderer="templates/post_details.jinja2")
 def detail(request):
     """View for the detail page."""
-    # request.matchdict.['id']
     return {"post": ENTRIES[int(request.matchdict['id']) - 1]}
 
 
@@ -56,14 +49,4 @@ def create(request):
 @view_config(route_name="update", renderer="template")
 def update(request):
     """View for update page."""
-    imported_text = open(os.path.join(HERE, 'templates/edit_post_form.html')).read()
-    # return Response(imported_text)
-    return {"post": ENTRIES}
-
-
-# def includeme(config):
-#     """Include me function."""
-#     config.add_view(home_list, route_name='home')
-#     config.add_view(detail, route_name='detail')
-#     config.add_view(create, route_name='create')
-#     config.add_view(update, route_name='update')
+    return {"post": ENTRIES[int(request.matchdict['id']) - 1]}

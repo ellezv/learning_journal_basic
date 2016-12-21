@@ -23,7 +23,11 @@ ENTRIES = [
         "title": "Entry 2",
         "id": 2,
         "creation_date": "Dec 21, 2016",
-        "body": "I learned some stuff about some other stuff."
+        "body": """Today I learned that I don't know how to implement a Deque.
+          So there's that.
+          Jinja2 templating is really similar to Django templates which have a (very minimal) experience with so it wasn't too overwhelming.
+          I'm excited to implement a database so I don't have to harcode this.
+        """
     },
 ]
 

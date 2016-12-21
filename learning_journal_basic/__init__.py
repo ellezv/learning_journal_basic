@@ -7,6 +7,6 @@ def main(global_config, **settings):
     config = Configurator(settings=settings)
     config.include('pyramid_jinja2')
     config.include(".routes")
-    config.include(".views")
-    config.scan()
+    # config.include(".views")
+    config.scan()  # will find the decorator in views and add routes.
     return config.make_wsgi_app()

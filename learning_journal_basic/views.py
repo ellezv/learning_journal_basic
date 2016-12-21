@@ -56,14 +56,4 @@ def create(request):
 @view_config(route_name="update", renderer="template")
 def update(request):
     """View for update page."""
-    imported_text = open(os.path.join(HERE, 'templates/edit_post_form.html')).read()
-    # return Response(imported_text)
     return {"post": ENTRIES}
-
-
-# def includeme(config):
-#     """Include me function."""
-#     config.add_view(home_list, route_name='home')
-#     config.add_view(detail, route_name='detail')
-#     config.add_view(create, route_name='create')
-#     config.add_view(update, route_name='update')

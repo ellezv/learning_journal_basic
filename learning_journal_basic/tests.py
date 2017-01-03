@@ -13,7 +13,7 @@ def test_home_page_has_right_dict(req):
     """My home page view returns some data."""
     from .views import home_list
     response = home_list(req)
-    assert "bag_list" in response
+    assert "posts" in response
 
 
 def test_home_page_has_iter(req):

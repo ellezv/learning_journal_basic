@@ -29,4 +29,3 @@ def testapp():
     from learning_journal_basic import main
     app = main({})
     return TestApp(app)
-

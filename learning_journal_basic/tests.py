@@ -30,8 +30,3 @@ def testapp():
     app = main({})
     return TestApp(app)
 
-
-# def test_home_page_has_list(testapp):
-#     response = testapp.get("/", status=200)
-#     inner_html = response.inner_html()
-#     assert "<li>" in inner_html
